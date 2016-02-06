@@ -1,0 +1,1 @@
+{"size": 2, "name": "aa_sock_opt_perm", "sourcefile": "security/apparmor/apparmorfs.c", "children": [{"size": 1, "name": "apparmor_socket_setsockopt", "sourcefile": "security/apparmor/lsm.c", "children": []}, {"size": 1, "name": "apparmor_socket_getsockopt", "sourcefile": "security/apparmor/lsm.c", "children": []}]}

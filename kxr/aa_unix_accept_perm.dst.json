@@ -1,0 +1,1 @@
+{"size": 1, "name": "aa_unix_accept_perm", "sourcefile": "security/apparmor/af_unix.c", "children": [{"size": 1, "name": "aa_sock_accept_perm", "sourcefile": "security/apparmor/apparmorfs.c", "children": [{"size": 1, "name": "apparmor_socket_accept", "sourcefile": "security/apparmor/lsm.c", "children": []}]}]}

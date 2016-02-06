@@ -1,0 +1,1 @@
+{"size": 2, "name": "aa_free_root_ns", "sourcefile": "security/apparmor/policy.c", "children": [{"size": 1, "name": "__initcall_apparmor_init", "sourcefile": "TODO", "children": []}, {"size": 1, "name": "apparmor_init", "sourcefile": "security/apparmor/lsm.c", "children": []}]}

@@ -1,0 +1,1 @@
+{"size": 1, "name": "acpi_numa_x2apic_affinity_init", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_parse_x2apic_affinity", "sourcefile": "N/A", "children": []}]}

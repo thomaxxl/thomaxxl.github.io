@@ -1,0 +1,1 @@
+{"size": 3, "name": "acpi_lid_send_state", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_button_add", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "acpi_button_resume", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "acpi_button_notify", "sourcefile": "N/A", "children": []}]}

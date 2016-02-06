@@ -1,0 +1,1 @@
+{"size": 1, "name": "acpi_get_ioapic_id", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_register_ioapic", "sourcefile": "N/A", "children": [{"size": 1, "name": "handle_ioapic_add", "sourcefile": "N/A", "children": []}]}]}

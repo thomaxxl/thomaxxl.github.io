@@ -1,0 +1,1 @@
+{"size": 2, "name": "acpi_ut_get_resource_end_tag", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_ex_concat_template", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_ex_opcode_2A_1T_1R", "sourcefile": "N/A", "children": []}]}]}

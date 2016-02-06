@@ -1,0 +1,1 @@
+{"size": 1, "name": "acpi_ec_add_query_handler", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_ec_register_query_methods", "sourcefile": "N/A", "children": []}]}

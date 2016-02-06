@@ -1,0 +1,1 @@
+{"size": 1, "name": "aa_sock_bind_perm", "sourcefile": "security/apparmor/apparmorfs.c", "children": [{"size": 1, "name": "apparmor_socket_bind", "sourcefile": "security/apparmor/lsm.c", "children": []}]}

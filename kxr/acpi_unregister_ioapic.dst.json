@@ -1,0 +1,1 @@
+{"size": 1, "name": "acpi_unregister_ioapic", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_ioapic_remove", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_pci_root_remove", "sourcefile": "N/A", "children": []}]}]}

@@ -1,0 +1,1 @@
+{"size": 16, "name": "acpi_request_region", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_reserve_resources", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "__initcall_acpi_reserve_resources5s", "sourcefile": "N/A", "children": []}]}

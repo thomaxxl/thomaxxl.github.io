@@ -1,0 +1,1 @@
+{"size": 2, "name": "aa_sock_msg_perm", "sourcefile": "security/apparmor/apparmorfs.c", "children": [{"size": 1, "name": "apparmor_socket_sendmsg", "sourcefile": "security/apparmor/lsm.c", "children": []}, {"size": 1, "name": "apparmor_socket_recvmsg", "sourcefile": "security/apparmor/lsm.c", "children": []}]}

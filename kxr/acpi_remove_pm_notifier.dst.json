@@ -1,0 +1,1 @@
+{"size": 3, "name": "acpi_remove_pm_notifier", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_dev_pm_detach", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "acpi_pci_root_remove", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "pci_acpi_cleanup", "sourcefile": "N/A", "children": []}]}

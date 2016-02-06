@@ -1,0 +1,1 @@
+{"size": 3, "name": "acpi_pci_run_osc", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_pci_root_add", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "acpi_pci_osc_control_set", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_get_hp_hw_control_from_firmware", "sourcefile": "N/A", "children": []}]}]}

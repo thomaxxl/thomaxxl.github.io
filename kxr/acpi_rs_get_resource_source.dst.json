@@ -1,0 +1,1 @@
+{"size": 4, "name": "acpi_rs_get_resource_source", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_rs_convert_aml_to_resource", "sourcefile": "N/A", "children": [{"size": 1, "name": "acpi_rs_convert_aml_to_resources", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "acpi_rs_get_address_common", "sourcefile": "N/A", "children": []}]}]}

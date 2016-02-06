@@ -1,0 +1,1 @@
+{"size": 2, "name": "acpi_processor_notify_smm", "sourcefile": "N/A", "children": [{"size": 1, "name": "powernowk8_cpu_init", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "acpi_cpufreq_cpu_init", "sourcefile": "N/A", "children": []}]}

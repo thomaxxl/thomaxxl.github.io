@@ -1,0 +1,1 @@
+{"size": 2, "name": "acpi_processor_max_state", "sourcefile": "N/A", "children": [{"size": 1, "name": "processor_set_cur_state", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "processor_get_max_state", "sourcefile": "N/A", "children": []}]}

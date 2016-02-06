@@ -1,0 +1,1 @@
+{"size": 2, "name": "acpi_is_pnp_device", "sourcefile": "N/A", "children": [{"size": 1, "name": "pnpacpi_add_device_handler", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "acpi_device_probe", "sourcefile": "N/A", "children": []}]}

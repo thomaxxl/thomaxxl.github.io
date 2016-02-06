@@ -1,0 +1,1 @@
+{"size": 2, "name": "aa_perm_mask_to_str", "sourcefile": "security/apparmor/lib.c", "children": [{"size": 1, "name": "audit_file_mask", "sourcefile": "security/apparmor/file.c", "children": [{"size": 1, "name": "file_audit_cb", "sourcefile": "security/apparmor/file.c", "children": []}]}]}
