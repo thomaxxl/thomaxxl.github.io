@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+#tree {
+  left: 60px;
+  padding-left: 120px;
+  margin-left: 20px;
+  overflow: visible;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="//keith-wood.name/js/jquery.svgdom.js"></script>
+
+<div id="tree"></div>
+<script>
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function get_text(d){
+    return d.name ;//+ '<h1>('+ d.sourcefile + ')</h1>';
+}
+    
+
+var scale = getParameterByName('scale');
+
+if (scale === ""){
+    scale = 1.2;
+}
+
+var width = getParameterByName('width') * scale,
+    height = getParameterByName('height') * scale;
+
+var json_f = getParameterByName('json');
+
+var tree = d3.layout.tree()
+    .size([height, width - 160]);
+
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+var svg = d3.select("#tree").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("overflow","visible")
+  .append("g")
+    .attr("transform", "translate(40,0)");
+
+d3.json(json_f, function(error, json) {
+  if (error) throw error;
+
+  var nodes = tree.nodes(json),
+      links = tree.links(nodes);
+
+  var link = svg.selectAll("path.link")
+      .data(links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", diagonal);
+
+  var node = svg.selectAll("g.node")
+      .data(nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+
+  node.append("circle")
+      .attr("r", 4.5);
+
+  node.append("text")
+      .attr("id",function(d) { return get_text(d) })
+      .attr("dx", function(d) { return d.children ? -8 : 8; })
+      .attr("dy", 3)
+      .attr("text-anchor", function(d) { return d.children ? "end" : "start"; })
+      .text(function(d) { return get_text(d) });
+
+  $(".node",svg.root()).bind('click', function() {
+          alert('path clicked');
+          }); 
+  
+  /*node.append("foreignObject")
+      .attr("dx", function(d) { return d.children ? -8 : 8; })
+      .attr("dy", 3)
+      .attr("text-anchor", function(d) { return d.children ? "end" : "start"; })
+      .append("xhtml:body")
+      .html(function(d){ return '<div><u>' + d.name +'</u></div>'} );
+  */
+});
+
+d3.select(self.frameElement).style("height", height + "px");
+
+</script>
+
