@@ -1,0 +1,1 @@
+{"size": 3, "name": "amd_cache_northbridges", "sourcefile": "N/A", "children": [{"size": 1, "name": "init_amd_nbs", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "agp_amd64_probe", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "__initcall_init_amd_nbs5", "sourcefile": "N/A", "children": []}]}

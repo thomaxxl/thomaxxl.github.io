@@ -1,0 +1,1 @@
+{"size": 1, "name": "addrconf_prefix_rcv", "sourcefile": "net/ipv6/af_inet6.c", "children": [{"size": 1, "name": "ndisc_rcv", "sourcefile": "net/ipv6/af_inet6.c", "children": [{"size": 1, "name": "icmpv6_rcv", "sourcefile": "net/ipv6/icmp.c", "children": []}]}]}

@@ -1,0 +1,1 @@
+{"size": 2, "name": "alloc_pci_root_info", "sourcefile": "N/A", "children": [{"size": 1, "name": "early_root_info_init", "sourcefile": "N/A", "children": [{"size": 1, "name": "__initcall_amd_postcore_init2", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "amd_postcore_init", "sourcefile": "N/A", "children": []}]}]}

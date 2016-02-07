@@ -1,0 +1,1 @@
+{"size": 2, "name": "amd64_fetch_size", "sourcefile": "N/A", "children": [{"size": 1, "name": "nforce3_agp_init", "sourcefile": "N/A", "children": [{"size": 1, "name": "agp_amd64_probe", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "agp_amd64_resume", "sourcefile": "N/A", "children": []}]}]}

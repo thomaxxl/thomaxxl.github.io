@@ -1,0 +1,1 @@
+{"size": 3, "name": "amd_uncore_cpu_up_prepare", "sourcefile": "N/A", "children": [{"size": 1, "name": "amd_uncore_cpu_notifier", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "amd_uncore_init", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "__initcall_amd_uncore_init6", "sourcefile": "N/A", "children": []}]}

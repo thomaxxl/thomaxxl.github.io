@@ -1,0 +1,1 @@
+{"size": 2, "name": "addrconf_dad_stop", "sourcefile": "net/ipv6/af_inet6.c", "children": [{"size": 1, "name": "addrconf_dad_work", "sourcefile": "net/ipv6/af_inet6.c", "children": []}]}

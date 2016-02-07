@@ -1,0 +1,1 @@
+{"size": 2, "name": "addrconf_notify", "sourcefile": "net/ipv6/af_inet6.c", "children": [{"size": 1, "name": "dev_disable_change", "sourcefile": "net/ipv6/af_inet6.c", "children": [{"size": 1, "name": "addrconf_sysctl_disable", "sourcefile": "net/ipv6/af_inet6.c", "children": []}]}]}

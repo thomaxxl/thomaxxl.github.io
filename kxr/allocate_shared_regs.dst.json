@@ -1,0 +1,1 @@
+{"size": 2, "name": "allocate_shared_regs", "sourcefile": "N/A", "children": [{"size": 1, "name": "allocate_fake_cpuc", "sourcefile": "N/A", "children": [{"size": 1, "name": "x86_pmu_event_init", "sourcefile": "N/A", "children": []}]}, {"size": 1, "name": "intel_pmu_cpu_prepare", "sourcefile": "N/A", "children": []}]}

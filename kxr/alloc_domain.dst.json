@@ -1,0 +1,1 @@
+{"size": 2, "name": "alloc_domain", "sourcefile": "N/A", "children": [{"size": 1, "name": "intel_iommu_domain_alloc", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "init_dmars", "sourcefile": "N/A", "children": [{"size": 1, "name": "intel_iommu_init", "sourcefile": "N/A", "children": []}]}]}
