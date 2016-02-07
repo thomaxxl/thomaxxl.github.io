@@ -1,0 +1,1 @@
+{"size": 2, "name": "arch_mmap_rnd", "sourcefile": "N/A", "children": [{"size": 1, "name": "load_elf_binary", "sourcefile": "fs/binfmt_elf.c", "children": []}, {"size": 1, "name": "arch_pick_mmap_layout", "sourcefile": "N/A", "children": [{"size": 1, "name": "setup_new_exec", "sourcefile": "fs/exec.c", "children": []}]}]}

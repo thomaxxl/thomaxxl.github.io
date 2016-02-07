@@ -1,0 +1,1 @@
+{"size": 1, "name": "APIC_init_uniprocessor", "sourcefile": "N/A", "children": [{"size": 1, "name": "native_smp_prepare_cpus", "sourcefile": "N/A", "children": [{"size": 1, "name": "xen_hvm_smp_prepare_cpus", "sourcefile": "N/A", "children": []}]}]}
