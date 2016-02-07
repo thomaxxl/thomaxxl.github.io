@@ -1,0 +1,1 @@
+{"size": 1, "name": "arch_report_meminfo", "sourcefile": "N/A", "children": [{"size": 1, "name": "meminfo_proc_show", "sourcefile": "fs/proc/meminfo.c", "children": []}]}

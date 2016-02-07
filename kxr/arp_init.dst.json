@@ -1,0 +1,1 @@
+{"size": 2, "name": "arp_init", "sourcefile": "net/ipv4/arp.c", "children": [{"size": 1, "name": "__initcall_inet_init5", "sourcefile": "net/ipv4/af_inet.c", "children": []}, {"size": 1, "name": "inet_init", "sourcefile": "net/ipv4/af_inet.c", "children": []}]}

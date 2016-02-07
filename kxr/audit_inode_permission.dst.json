@@ -1,0 +1,1 @@
+{"size": 1, "name": "audit_inode_permission", "sourcefile": "security/selinux/avc.c", "children": [{"size": 1, "name": "selinux_inode_permission", "sourcefile": "security/selinux/avc.c", "children": []}]}

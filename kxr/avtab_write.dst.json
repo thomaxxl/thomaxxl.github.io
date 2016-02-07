@@ -1,0 +1,1 @@
+{"size": 1, "name": "avtab_write", "sourcefile": "security/selinux/avc.c", "children": [{"size": 1, "name": "policydb_write", "sourcefile": "security/selinux/avc.c", "children": [{"size": 1, "name": "security_read_policy", "sourcefile": "security/selinux/avc.c", "children": [{"size": 1, "name": "sel_open_policy", "sourcefile": "security/selinux/avc.c", "children": []}]}]}]}
