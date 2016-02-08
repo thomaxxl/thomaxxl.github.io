@@ -1,0 +1,1 @@
+{"size": 2, "name": "bitmap_release_region", "sourcefile": "lib/bitmap.c", "children": [{"size": 1, "name": "intel_free_irq_resources", "sourcefile": "N/A", "children": [{"size": 1, "name": "intel_irq_remapping_alloc", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "intel_irq_remapping_free", "sourcefile": "N/A", "children": []}]}]}
