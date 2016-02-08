@@ -1,0 +1,1 @@
+{"size": 2, "name": "bcj_apply", "sourcefile": "lib/xz/xz_dec_syms.c", "children": [{"size": 1, "name": "xz_dec_bcj_run", "sourcefile": "lib/xz/xz_dec_syms.c", "children": [{"size": 1, "name": "xz_dec_run", "sourcefile": "lib/xz/xz_dec_stream.c", "children": [{"size": 1, "name": "unxz", "sourcefile": "lib/decompress_unxz.c", "children": []}]}]}]}
