@@ -1,0 +1,1 @@
+{"size": 2, "name": "blk_dev_init", "sourcefile": "block/blk-core.c", "children": [{"size": 1, "name": "genhd_device_init", "sourcefile": "block/genhd.c", "children": []}, {"size": 1, "name": "__initcall_genhd_device_init4", "sourcefile": "block/genhd.c", "children": []}]}
