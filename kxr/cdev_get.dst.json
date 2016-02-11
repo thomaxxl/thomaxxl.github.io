@@ -1,0 +1,1 @@
+{"size": 2, "name": "cdev_get", "sourcefile": "fs/char_dev.c", "children": [{"size": 1, "name": "chrdev_open", "sourcefile": "fs/char_dev.c", "children": []}]}

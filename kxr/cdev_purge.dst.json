@@ -1,0 +1,1 @@
+{"size": 2, "name": "cdev_purge", "sourcefile": "fs/char_dev.c", "children": [{"size": 1, "name": "cdev_dynamic_release", "sourcefile": "fs/char_dev.c", "children": []}, {"size": 1, "name": "cdev_default_release", "sourcefile": "fs/char_dev.c", "children": []}]}
