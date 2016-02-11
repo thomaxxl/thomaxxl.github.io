@@ -1,0 +1,1 @@
+{"size": 1, "name": "bpf_get_trace_printk_proto", "sourcefile": "N/A", "children": [{"size": 1, "name": "sk_filter_func_proto", "sourcefile": "net/core/filter.c", "children": [{"size": 1, "name": "tc_cls_act_func_proto", "sourcefile": "net/core/filter.c", "children": []}]}]}

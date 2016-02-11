@@ -1,0 +1,1 @@
+{"size": 2, "name": "block_write_full_page", "sourcefile": "fs/buffer.c", "children": [{"size": 1, "name": "fat_writepage", "sourcefile": "fs/fat/inode.c", "children": []}, {"size": 1, "name": "blkdev_writepage", "sourcefile": "fs/block_dev.c", "children": []}]}
