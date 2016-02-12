@@ -1,0 +1,1 @@
+{"size": 2, "name": "chroot_fs_refs", "sourcefile": "fs/fs_struct.c", "children": [{"size": 1, "name": "SyS_pivot_root", "sourcefile": "fs/namespace.c", "children": []}, {"size": 1, "name": "sys_pivot_root", "sourcefile": "fs/namespace.c", "children": []}]}

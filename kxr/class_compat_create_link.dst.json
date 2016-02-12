@@ -1,0 +1,1 @@
+{"size": 2, "name": "class_compat_create_link", "sourcefile": "N/A", "children": [{"size": 1, "name": "i2c_register_adapter", "sourcefile": "N/A", "children": [{"size": 1, "name": "i2c_add_numbered_adapter", "sourcefile": "N/A", "children": []}, {"size": 1, "name": "i2c_add_adapter", "sourcefile": "N/A", "children": []}]}]}
