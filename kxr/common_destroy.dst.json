@@ -1,0 +1,1 @@
+{"size": 1, "name": "common_destroy", "sourcefile": "security/selinux/avc.c", "children": [{"size": 1, "name": "common_read", "sourcefile": "security/selinux/avc.c", "children": []}]}
