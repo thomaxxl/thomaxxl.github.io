@@ -2,6 +2,7 @@ import sys, os
 import MySQLdb as mdb
 import json
 import logging
+import cPickle as pickle
 
 DBHOST = 'localhost'
 DBUSER = 'root'
@@ -62,9 +63,7 @@ class Graph():
 
     def load(self, direction = ["callee"]):
         
-        processed = set()
         for node in self.nodes.values():
-            processed.add(node)
             neigbours = self.load_node(node, direction)
 
     def load_node(self, node, direction = ["callee"] ):
@@ -109,14 +108,15 @@ class Graph():
 
     def dump_nodes(self, destdir = '/mnt/u/json'):
         
-        for node in self.nodes:
-            if not node.get_callers():
-                self.dump_node(node,destdir)
+        for node in self.nodes.values():
+            self.dump_node(node,destdir)
     
-    def dump_node(self,node_name,destdir):
-        node    = self.nodes[node_name]
+    def dump_node(self,node,destdir):
         outfile = os.path.join(destdir,node.name + '.json' )
         log.debug('dumping {} to {}'.format(node,outfile))
+        if node.get_callers() or not node.get_callees():
+            log.debug('Ignoring {}'.format(node))
+            return
         with open(outfile, 'w+') as f:
             f.write(json.dumps(node,cls=NodeEncoder,indent=True,check_circular=False))
 
