@@ -23,6 +23,123 @@ $("#loading").append(spinner.el);
 ///////// End Spinner
 
 
+trace =[];
+trace["activate_task"]=[];
+trace["check_preempt_curr"]=[];
+trace["clockevents_program_event"]=[];
+trace["_cond_resched"]=[];
+trace["deactivate_task"]=[];
+trace["dput"]=[];
+trace["filename_lookup"]=[];
+trace["getname_flags"]=[];
+trace["hrtimer_cancel"]=[];
+trace["hrtimer_try_to_cancel"]=[];
+trace["__inode_permission"]=[];
+trace["inode_permission"]=[];
+trace["kmem_cache_alloc"]=[];
+trace["kmem_cache_free"]=[];
+trace["legitimize_mnt"]=[];
+trace["link_path_walk"]=[];
+trace["mntput_no_expire"]=[];
+trace["None"]=[];
+trace["path_get"]=[];
+trace["path_init"]=[];
+trace["path_lookupat"]=[];
+trace["preempt_schedule_common"]=[];
+trace["__remove_hrtimer"]=[];
+trace["sched_clock_cpu"]=[];
+trace["__schedule"]=[];
+trace["__slab_free"]=[];
+trace["sys_chdir"]=[];
+trace["task_work_add"]=[];
+trace["tick_program_event"]=[];
+trace["timerqueue_del"]=[];
+trace["ttwu_do_wakeup"]=[];
+trace["unlazy_walk"]=[];
+trace["update_rq_clock"]=[];
+trace["user_path_at_empty"]=[];
+trace["walk_component"]=[];
+trace["activate_task"].push("enqueue_task");
+trace["check_preempt_curr"].push("resched_curr");
+trace["clockevents_program_event"].push("ktime_get");
+trace["_cond_resched"].push("preempt_schedule_common");
+trace["deactivate_task"].push("dequeue_task");
+trace["dput"].push("lockref_put_return");
+trace["filename_lookup"].push("path_lookupat");
+trace["filename_lookup"].push("restore_nameidata");
+trace["getname_flags"].push("kfree");
+trace["getname_flags"].push("kmem_cache_alloc");
+trace["getname_flags"].push("kmem_cache_alloc_trace");
+trace["getname_flags"].push("kmem_cache_free");
+trace["getname_flags"].push("putname");
+trace["getname_flags"].push("strncpy_from_user");
+trace["hrtimer_cancel"].push("hrtimer_try_to_cancel");
+trace["hrtimer_try_to_cancel"].push("_raw_spin_unlock_irqrestore");
+trace["hrtimer_try_to_cancel"].push("__remove_hrtimer");
+trace["__inode_permission"].push("generic_permission");
+trace["inode_permission"].push("__inode_permission");
+trace["__inode_permission"].push("security_inode_permission");
+trace["kmem_cache_alloc"].push("_cond_resched");
+trace["kmem_cache_alloc"].push("memset");
+trace["kmem_cache_free"].push("__slab_free");
+trace["legitimize_mnt"].push("__legitimize_mnt");
+trace["legitimize_mnt"].push("mntput_no_expire");
+trace["link_path_walk"].push("dput");
+trace["link_path_walk"].push("mntput");
+trace["link_path_walk"].push("unlazy_walk");
+trace["mntput_no_expire"].push("task_work_add");
+trace["None"].push("sys_chdir");
+trace["path_get"].push("lockref_get");
+trace["path_get"].push("mntget");
+trace["path_init"].push("fput");
+trace["path_init"].push("path_get");
+trace["path_init"].push("set_root_rcu");
+trace["path_lookupat"].push("complete_walk");
+trace["path_lookupat"].push("link_path_walk");
+trace["path_lookupat"].push("path_init");
+trace["path_lookupat"].push("terminate_walk");
+trace["path_lookupat"].push("walk_component");
+trace["preempt_schedule_common"].push("__schedule");
+trace["__remove_hrtimer"].push("__hrtimer_get_next_event");
+trace["__remove_hrtimer"].push("tick_program_event");
+trace["__remove_hrtimer"].push("timerqueue_del");
+trace["sched_clock_cpu"].push("sched_clock");
+trace["__schedule"].push("activate_task");
+trace["__schedule"].push("deactivate_task");
+trace["__schedule"].push("finish_task_switch");
+trace["__schedule"].push("hrtimer_active");
+trace["__schedule"].push("hrtimer_cancel");
+trace["__schedule"].push("_raw_spin_lock");
+trace["__schedule"].push("_raw_spin_lock_irq");
+trace["__schedule"].push("rcu_note_context_switch");
+trace["__schedule"].push("__switch_to");
+trace["__schedule"].push("ttwu_do_wakeup");
+trace["__schedule"].push("ttwu_stat");
+trace["__schedule"].push("update_rq_clock");
+trace["__slab_free"].push("cmpxchg_double_slab");
+trace["__slab_free"].push("_raw_spin_lock_irqsave");
+trace["sys_chdir"].push("inode_permission");
+trace["sys_chdir"].push("path_put");
+trace["sys_chdir"].push("set_fs_pwd");
+trace["sys_chdir"].push("user_path_at_empty");
+trace["task_work_add"].push("kick_process");
+trace["tick_program_event"].push("clockevents_program_event");
+trace["timerqueue_del"].push("rb_erase");
+trace["timerqueue_del"].push("rb_next");
+trace["ttwu_do_wakeup"].push("check_preempt_curr");
+trace["unlazy_walk"].push("drop_links");
+trace["unlazy_walk"].push("legitimize_mnt");
+trace["unlazy_walk"].push("lockref_get_not_dead");
+trace["update_rq_clock"].push("sched_clock_cpu");
+trace["user_path_at_empty"].push("filename_lookup");
+trace["user_path_at_empty"].push("getname_flags");
+trace["walk_component"].push("mutex_lock");
+trace["walk_component"].push("mutex_unlock");
+
+
+
+
+
 var depth = 1;
 var node_depth = 100;
 var node_height = 20;
@@ -144,7 +261,9 @@ function goto_node(node){
 function resize(direction, pm) {
     size = tree.size();
     if (direction == 'x') {
-        node_height += pm == '+' ? 2 : -2;
+        factor = node_height > 5 ? 3 : 1; 
+        node_height += pm == '+' ? factor : -factor;
+        node_height = node_height < 2 ? 1 : node_height;
     }
     if (direction == 'y') {
         node_depth += pm == '+' ? 20 : -20
@@ -181,13 +300,38 @@ function update(source) {
             if (is_collapsed(node)) {
                 return "lightsteelblue";
             } else {
-                return "#F88080";
+                return "darksalmon";
             }
         }
         if (node._children && has_children(node) ) {
             return "lightsteelblue";
         }
         return "white";
+    }
+
+    // Check if a link is in the trace array
+    function is_traced(link){
+        source = link.source;
+        target = link.target;
+        traced = false;
+        trace_source = trace[source.label];
+        if( !trace_source || ! target ){
+            return traced;
+        }
+        trace_source.forEach(function(trace_dest){
+            if (trace_dest == target.label){
+                traced = true;
+             }
+        });
+        return traced;
+    }
+
+    function get_link_class(link){
+        pclass = "link";
+        if(is_traced(link)){
+            pclass += " trace";
+        }
+        return pclass;
     }
 
     var duration = d3.event && d3.event.altKey ? 5000 : 500;
@@ -299,7 +443,8 @@ function update(source) {
 
     // Enter any new links at the parent's previous position.
     link.enter().insert("svg:path", "g")
-        .attr("class", "link")
+        .attr("class", get_link_class)
+        //.attr("class", "link")
         .attr("d", function(d) {
             var o = {
                 x: source.x0,
@@ -396,6 +541,14 @@ function getParameterByName(name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-
 init();
 //$("#control").draggable();
+
+// Cause enter on the depth to expand
+$("#depth").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#expand").click();
+    }
+});
+
+

@@ -1,7 +1,10 @@
 <html>
 <head>
-<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="//d3js.org/d3.v3.min.js"></script-->
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
 <script src="jquery.min.js"></script>
 <script src="spin.min.js"></script>
 <script src="d3.v3.min.js"></script>
@@ -27,6 +30,14 @@ path.link {
   stroke-width: 1.5px;
 }
 
+path.link.trace {
+    stroke : palegreen;
+}
+
+path.link:hover {
+    stroke: darksalmon;
+}
+
 svg { overflow: scroll; 
       width: 12000;
 }
@@ -38,14 +49,14 @@ svg { overflow: scroll;
 
 #control {
         position: fixed;
-        right: 20px;
+        left: 20px;
         bottom: 20px;
         z-index:4;
 }
 
 #arrowcontrol {
         position: fixed;
-        right: 20px;
+        left: 20px;
         bottom: 50px;
         z-index:4;
         }
@@ -80,9 +91,17 @@ svg { overflow: scroll;
     height:     100%;
     width:      100%;
 }
+input[type="number"] {
+   width:50px;
+}
+
+
 </style>
 </head>
 <body>
+
+
+
 <div id="loading"></div>
 <div id="control">
     <div id="arrowcontrol">
@@ -94,8 +113,8 @@ svg { overflow: scroll;
         </div>
     </div>
     <div id="inputs">
-        <input type="text" id="depth" name="depth" value="1" size="2">
-        <input type="button" value="Expand" onclick="javascript:init()" /> 
+        <input type="number" id="depth" name="depth" value="2" size="2" max="99">
+        <input type="button" id="expand" value="Expand" onclick="javascript:init()" /> 
     </div>
 </div>
 

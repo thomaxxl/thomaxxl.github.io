@@ -6,7 +6,7 @@ import cPickle as pickle
 
 DBHOST = 'localhost'
 DBUSER = 'root'
-DBPASS = '0mgwtf%%'
+DBPASS = 'fucksecurity'
 DB     = 'stacktrack'
 
 con = mdb.connect(DBHOST,DBUSER,DBPASS,DB)
